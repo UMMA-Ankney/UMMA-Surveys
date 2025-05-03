@@ -73,7 +73,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
         formContainer.style.display = 'block'; // show the form
         if (hiddenInput) {
-            hiddenInput.value = promptText; // autofill the hidden prompt field
+            hiddenInput.value = promptText;
+            const event = new Event('change', { bubbles: true });
+                hiddenInput.dispatchEvent(event);
+               }// autofill the hidden prompt field
             }
         });
 });
