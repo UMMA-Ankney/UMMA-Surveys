@@ -77,6 +77,5 @@ document.addEventListener('DOMContentLoaded', function() {
             const event = new Event('change', { bubbles: true });
                 hiddenInput.dispatchEvent(event);
                }// autofill the hidden prompt field
-            }
         });
 });
