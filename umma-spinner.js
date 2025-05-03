@@ -68,13 +68,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
         document.getElementById('prompt').textContent = promptText;
 
-        // Replace these with your actual form and field selectors
-const formContainer = document.querySelector('#gravity-form-container');
-const hiddenInput = document.querySelector('input[name="input_40_1"]'); // replace with your actual input name
+        const formContainer = document.querySelector('#gravity-form-container');
+        const hiddenInput = document.querySelector('input[name="input_40_1"]');
 
-formContainer.style.display = 'block'; // show the form
-if (hiddenInput) {
-    hiddenInput.value = promptText; // autofill the hidden prompt field
-}
-    });
+        formContainer.style.display = 'block'; // show the form
+        if (hiddenInput) {
+            hiddenInput.value = promptText; // autofill the hidden prompt field
+            }
+        });
 });
