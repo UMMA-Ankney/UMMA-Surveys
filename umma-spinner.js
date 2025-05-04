@@ -84,5 +84,16 @@ document.addEventListener('DOMContentLoaded', function() {
             const event = new Event('change', { bubbles: true });
             hiddenInput.dispatchEvent(event);
         }
+        // Listen for the Gravity Forms confirmation event
+document.addEventListener('gform_confirmation_loaded', function(event) {
+    // Check if it's your specific form (ID 40)
+    if (event.detail.formId === 40) {
+        // Wait 5 seconds, then reload the page
+        setTimeout(function() {
+            window.location.reload();
+        }, 5000); // 5000 ms = 5 seconds
+    }
+});
+
     });
 });
