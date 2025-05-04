@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('prompt').textContent = promptText;
 
         const formContainer = document.querySelector('#gravity-form-container');
-        const hiddenInput = document.querySelector('input[name="input_40_1"]');
+        const hiddenInput = document.querySelector('input[name="field_40_1"]');
 
         formContainer.style.display = 'block'; // show the form
         if (hiddenInput) {
