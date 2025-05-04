@@ -68,14 +68,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
         document.getElementById('prompt').textContent = promptText;
 
+        // Show the form container (if you have it hidden initially)
         const formContainer = document.querySelector('#gravity-form-container');
-        const hiddenInput = document.querySelector('input[name="field_40_1"]');
+        if (formContainer) {
+            formContainer.style.display = 'block';
+        }
 
-        formContainer.style.display = 'block'; // show the form
+        // Fill the Gravity Forms text input (Form 40, Field 1)
+        const hiddenInput = document.getElementById('input_40_1');
         if (hiddenInput) {
             hiddenInput.value = promptText;
+            hiddenInput.setAttribute('value', promptText);
+
+            // Dispatch a change event to ensure Gravity Forms registers the change
             const event = new Event('change', { bubbles: true });
-                hiddenInput.dispatchEvent(event);
-               }// autofill the hidden prompt field
-        });
+            hiddenInput.dispatchEvent(event);
+        }
+    });
 });
