@@ -1,11 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const toggles = document.querySelectorAll(".glance-details-toggle");
+  // Get all toggle blocks — one per event row
+  const toggleBlocks = document.querySelectorAll(".glance-details-toggle");
 
-  toggles.forEach(function (toggleBlock) {
-    const button = toggleBlock.querySelector("button");
-    const details = toggleBlock.querySelector(".glance-details-content");
+  toggleBlocks.forEach(function (block) {
+    const button = block.querySelector("button");
+    const details = block.querySelector(".glance-details-content");
 
-    if (!button || !details) return; // exit if either element is missing
+    if (!button || !details) return; // skip if either piece is missing
 
     button.addEventListener("click", function () {
       const isHidden = details.style.display === "none" || details.style.display === "";
@@ -14,4 +15,3 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-
