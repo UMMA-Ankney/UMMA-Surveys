@@ -1,0 +1,6 @@
+function toggleDetails(button) {
+  const details = button.nextElementSibling;
+  const isHidden = details.style.display === "none";
+  details.style.display = isHidden ? "block" : "none";
+  button.textContent = isHidden ? "Hide Details" : "View More Details";
+}
